@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-AS				=		nasm
+NA				=		nasm
 
 ASFLAGS			=		-f elf64
 
@@ -36,7 +36,7 @@ $(NAME):				$(OBJS)
 						$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 %.o: 					%.asm
-						$(AS) $(ASFLAGS) $< -o $@
+						$(NA) $(ASFLAGS) $< -o $@
 
 clean:
 						$(RM) $(OBJS)
