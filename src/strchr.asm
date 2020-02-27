@@ -9,11 +9,11 @@ strchr:
 
 strchr_loop:
 
-    cmp [rdi], byte 0 ; checking the \0
-    je strchr_failed ; launch exit function
-
     cmp [rdi], rsi ; compare the current char and the second arg
     je strchr_success ; launch success function
+
+    cmp [rdi], byte 0 ; checking the \0
+    je strchr_failed ; launch exit function
 
     inc rdi ; iterate in the first arg
     jmp strchr_loop ; continue the loop
