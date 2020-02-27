@@ -7,8 +7,6 @@
 
 #include <stdio.h>
 
-int strcmp(char *, char *);
-
 int main () {
-   printf("%d\n", strcmp("zTOtotoa", "TOtoto"));
+   printf("%d\n", strcmp("tete", "tete"));
 }

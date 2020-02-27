@@ -9,6 +9,8 @@ strcmp:
     mov     rbp, rsp
 
 strcmp_loop:
+    cmp     bl, 0
+    je      end
     mov     bl, byte [rdi]
     mov     ah, byte [rsi]
     cmp     bl, ah
@@ -21,4 +23,8 @@ success:
     sub     bl, ah
     movsx   rax, bl
     pop     rbp
+    ret
+
+end:
+    mov rax, 0
     ret
