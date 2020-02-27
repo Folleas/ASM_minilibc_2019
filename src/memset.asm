@@ -3,6 +3,8 @@ SECTION .text
 GLOBAL memset
 
 memset:
+    push ebp
+    mov ebp, esp
     mov rcx, 0
 
 memset_loop:
