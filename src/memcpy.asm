@@ -10,8 +10,8 @@ memcpy:
 memcpy_loop:
     cmp rcx, rdx
     je end
-    mov r9, byte[rsi + rcx]
-    mov byte[rdi + rcx], r9
+    mov r10, byte[rsi + rcx]
+    mov byte[rdi + rcx], r10
     inc rcx
     jmp memcpy_loop
 
