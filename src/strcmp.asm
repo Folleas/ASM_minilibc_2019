@@ -9,7 +9,7 @@ strcmp:
     mov     rbp, rsp
 
 strcmp_loop:
-    cmp     bl, 0
+    cmp     bl, byte 0
     je      end
     mov     bl, byte [rdi]
     mov     ah, byte [rsi]
