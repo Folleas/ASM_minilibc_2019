@@ -7,10 +7,12 @@ global strcmp
 strcmp:
     push    rbp
     mov     rbp, rsp
+    cmp rdi, 0
+    je end
+    cmp rsi, 0
+    je end
 
 strcmp_loop:
-    cmp     bl, byte 0
-    je      end
     mov     bl, byte [rdi]
     mov     ah, byte [rsi]
     cmp     bl, ah
