@@ -3,15 +3,14 @@ SECTION .text
 GLOBAL memset
 
 memset:
-    push ebp
-    mov ebp, esp
     mov rcx, 0
 
 memset_loop:
-    cmp rcx, rdx
+    cmp rdx, 0
     je end
     mov byte[rdi + rcx], sil
     inc rcx
+    dec rdx
     jmp memset_loop
 
 end:
