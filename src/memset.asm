@@ -12,7 +12,7 @@ memset_loop:
     je end
     mov byte[rdi + rcx], sil
     inc rcx
-    jmp loop
+    jmp memset_loop
 
 end:
     mov rax, rdi
