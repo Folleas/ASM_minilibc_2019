@@ -4,6 +4,10 @@ GLOBAL memset
 
 memset:
     mov rcx, 0
+    mov     rax, rdi
+    cmp     rdi, 0
+    je      exit_loop
+    mov     rcx, rsi
 
 memset_loop:
     cmp rdx, 0
@@ -15,4 +19,8 @@ memset_loop:
 
 end:
     mov rax, rdi
+    ret
+
+exit_failure:
+
     ret
