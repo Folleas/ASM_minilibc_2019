@@ -6,7 +6,7 @@ memset:
     mov rcx, 0
     mov     rax, rdi
     cmp     rdi, 0
-    je      exit_loop
+    je      exit_failure
     mov     rcx, rsi
 
 memset_loop:
